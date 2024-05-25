@@ -57,3 +57,8 @@ ul li {
 .checked {
     text-decoration: line-through
 }
+
+#minhaLista {
+    justify-content: center;
+    display: flex;
+}
