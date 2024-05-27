@@ -10,24 +10,17 @@
     <title>exercicio_jquery</title>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>lista de tarefas</h1>
-    
-        </header>
-    
-        <form id="form-lista">
-            <h2>adicione suas tarefas</h2>
-            <input type="text" id="tarefa" required placeholder="nome da tarefa">
-            <button type="submit" id="btn-add">cadastrar</button>
-            <ul class="checked" id="minhaLista">
-                <li>
 
-                </li>
-            </ul>
-        </form>
-        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-        <script src="./main.js"></script>
+    <div class="container">
+        <h1>lista de tarefas</h1>
+        <div>
+            <input type="text" id="tarefaInput" placeholder="nome da tarefa">
+            <button id="addTarefaBtn">cadastrar</button>
+        </div>
+        <ul id="tarefaList"></ul>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="./main.js"></script>
 </body>
 </html>

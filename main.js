@@ -1,21 +1,14 @@
 $(document).ready(function() {
-    const NomeTarefa = [];
-    let linhas = '';
 
-    $('#form-lista').submit(function(e) {
-        e.preventDefault();
-        const inputTarefa = $('#input-tarefa').val();
-        NomeTarefa.push(inputTarefa);
-        linhas += `${inputTarefa}`;
-        $('#input-tarefa').val('');
-        atualizaTabela();
+    //adicionar tarefa
+    $('#addTarefaBtn').on('click', function() {
+        var tarefaText = $('#tarefaInput').val();
+        
+        if (tarefaText.lenghth > 0) addTarefa(tarefaText)
     });
 
-    $('ul').on('click', 'li', function() {
-        $(this).toggleClass('checked');
-    });
-
-    function atualizaTabela() {
-        $('ul').html(linhas);
+    //função para adicionar tarefa
+    function addTarefa(text) {
+        $('#tarefaList').append('<li><span>&times;</span>' + text + '</li>');
     }
 })
